@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hotel Feedback Form</title>
+<link href="stylesfeedbk.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="menu">
+    <header>
+      <h1>Hotel Feedback Form</h1>
+      <p>
+        Thank you for staying with us.
+   </p>
+<p>
+ Please provide feedback on your recent
+        stay.
+      </p>
+    </header>
+    <main>
+        <fieldset>
+      <form method="POST" action="/submit-feedback"> 
+    <legend>Personal Information</legend>
+  <div class="field">
+          <label for="full-name">Name (required):</label>
+          <input type="text" id="full-name" name="name" placeholder="e.g., John Doe" required size="20">
+</div>
+<div class="field">
+          <label for="email">Email address (required):</label>
+          <input
+            placeholder="example@email.com"
+            required
+            id="email"
+            type="email"
+            name="email"
+            size="20"
+          />
+</div>
+<div class="field">
+          <label for="age">Age (optional):</label>
+          <input placeholder="eg., 18" type="number" name="age" id="age" min="3" max="100" />
+</div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Was this your first time at our hotel?</legend>
+<div class="radio-group">
+          <input id="yes-option" type="radio" name="hotel-stay" value="yes" />
+          <label for="yes-option">Yes</label>
+</div>
+<div class="radio-group">
+          <input id="no-option" type="radio" name="hotel-stay" value="no" />
+          <label for="no-option">No</label>
+</div>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            Why did you choose to stay at our hotel? (Check all that apply)
+          </legend>
+<div class="check-group">
+          <input type="checkbox" id="ads" name="choice[]" value="ads" />
+          <label for="ads">Social Media Ads</label>
+</div>
+<div class="check-group">
+          <input
+            type="checkbox"
+            id="recommendation"
+            name="choice"
+            value="recommendation"
+          />
+          <label for="recommendation">Personal Recommendation</label>
+          </div>
+<div class="check-group">
+          <input type="checkbox" id="location" name="choice[]" value="location" />
+          <label for="location">Location</label>
+</div>
+<div class="check-group">
+          <input
+            checked
+            type="checkbox"
+            id="reputation"
+            name="choice[]"
+            value="reputation"
+          />
+          <label for="reputation">Reputation</label>
+          </div>
+<div class="check-group">
+          <input type="checkbox" id="price" name="choice[]" value="price" />
+          <label for="price">Price</label>
+</div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Ratings</legend>
+
+          <label for="service">How was the service?</label>
+
+          <select name="service" id="service">
+            <option value="poor">Poor</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+            <option selected value="excellent">Excellent</option>
+          </select>
+
+          <label for="food">How was the food?</label>
+
+          <select name="food" id="food">
+            <option value="poor">Poor</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+            <option selected value="excellent">Excellent</option>
+          </select>
+        </fieldset>
+
+        <label for="comments">Other Comments?</label>
+        <textarea cols="79" rows="5" name="comments" id="comments"></textarea>
+
+<button type="submit">Submit</button>
+      
+      </form>
+  </body>
+</html>
