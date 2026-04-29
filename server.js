@@ -9,8 +9,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // MongoDB Connection
-mongoose.connect("mongodb://admin:Mani12345@ac-q7crin9-shard-00-00.ns7vfac.mongodb.net:27017,ac-q7crin9-shard-00-01.ns7vfac.mongodb.net:27017,ac-q7crin9-shard-00-02.ns7vfac.mongodb.net:27017/?ssl=true&replicaSet=atlas-fbs9zn-shard-0&authSource=admin&appName=Cluster0")
-  .then(() => console.log("MongoDB connected ✅"))
+mongoose.connect(process.env.MONGO_URI)
+.then(() => console.log("MongoDB connected ✅"))
   .catch(err => console.log("Mongo Error:", err));
 
 // Schema
